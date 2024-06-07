@@ -4,3 +4,7 @@
 - 电话号码
 - QQ号
 - 邮箱地址
+
+## Dependecies
+python = 3.8
+pip install -r requirements.txt
