@@ -120,15 +120,12 @@ def mask_name_in_text(sentences: str):
 if __name__ == "__main__":
     DATA_DIR = "data"
     OUTPUT_DIR = "data_masked"
-    FILE_NAME  = "文本交付内容2023-12-15至2023-12-21-10329.xlsx"
 
     excel_files = os.listdir(DATA_DIR)
     csv_files = os.listdir(OUTPUT_DIR)
     for f in excel_files:
         if '$' in f:
             continue
-            
-        f = "文本交付内容2023-12-15至2023-12-21-10329.xlsx"
         df = pd.read_excel(os.path.join(DATA_DIR, f))
         masked_msgs = []
         for index, row in df.iterrows():
